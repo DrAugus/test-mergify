@@ -51,6 +51,7 @@ pull_request_rules:
       - or:
           - check-success=deploy-a
           - check-success=deploy-b
+          - check-success=deploy-a(ubuntu-latest, 16, art/.output/public, augusmeow, art)
     actions:
       merge:
         method: merge
