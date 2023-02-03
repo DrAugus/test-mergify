@@ -1,3 +1,3 @@
 # Mergify
 
-test mergify
+test mergify done
