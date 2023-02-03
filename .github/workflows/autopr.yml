@@ -1,0 +1,21 @@
+name: Staging Auto-PR
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  pull-request:
+    name: Open PR to master
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        name: checkout
+
+      - uses: repo-sync/pull-request@v2
+        name: pull-request
+        with:
+          destination_branch: master
+          pr_title: 'pulling ${{ github.ref }} into master'
+          pr_body: '👑 *An automated PR*'
+          github_token: ${{ secrets.ACCESS_TOKEN }}

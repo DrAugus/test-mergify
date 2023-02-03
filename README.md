@@ -1,0 +1,3 @@
+# Mergify
+
+test mergify
